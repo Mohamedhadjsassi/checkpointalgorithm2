@@ -1,0 +1,47 @@
+Algorithm checkpoint2 
+
+
+type 
+S=array_of_integer[20];
+
+var
+s1 , s2: S;
+i,n1 , n2: integer ;
+
+
+function even(s1:S , n1:integer ,s2:S , n2:integer , sum:integer):integer
+var 
+i,j:integer 
+begin
+for i=1 to n1
+    j=1;
+      while s1[i]<>s2[j] and if j<>n2+1 then do
+       j++      
+       end while 
+   if (j=n2+1) then 
+    sum=sum+S1[i]
+    end if
+end for
+return sum
+
+begin
+
+writeln('provide me with the length of s1 ');
+read(n1);
+writeln('provide me with the length of s2 ');
+read(n2);
+for i:=1 to n1 do
+   write ('insert the value of s1[', i , ']' );
+    read (s1[i]);     
+end i
+for i:=1 to n2 do
+   write ('insert the value of s2[', i , ']' );
+    read (s2[i]);     
+end i
+
+sum =even(s1, n1 ,s2, n2);
+sum=even(s2,n2,s1,n1);
+
+end
+
+
